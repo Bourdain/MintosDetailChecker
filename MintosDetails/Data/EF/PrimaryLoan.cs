@@ -16,23 +16,23 @@ namespace Data.EF
     {
         public string Country { get; set; }
         public string ID { get; set; }
-        public string Issue_Date { get; set; }
-        public string Closing_Date { get; set; }
+        public Nullable<System.DateTime> Issue_Date { get; set; }
+        public Nullable<System.DateTime> Closing_Date { get; set; }
         public string Loan_Type { get; set; }
         public string Amortization_Method { get; set; }
         public string Loan_Originator { get; set; }
-        public Nullable<double> Loan_Amount { get; set; }
-        public Nullable<double> Remaining_Principal { get; set; }
-        public Nullable<double> LTV { get; set; }
-        public Nullable<double> Interest_Rate { get; set; }
-        public Nullable<double> Term { get; set; }
-        public Nullable<double> Payments_Received { get; set; }
+        public Nullable<decimal> Loan_Amount { get; set; }
+        public Nullable<decimal> Remaining_Principal { get; set; }
+        public Nullable<decimal> LTV { get; set; }
+        public Nullable<decimal> Interest_Rate { get; set; }
+        public string Term { get; set; }
+        public Nullable<int> Payments_Received { get; set; }
         public string Status { get; set; }
-        public Nullable<double> Amount_Available_for_Investment { get; set; }
+        public Nullable<decimal> Amount_Available_for_Investment { get; set; }
         public string Buyback_Guarantee { get; set; }
-        public Nullable<double> My_Investments { get; set; }
+        public Nullable<decimal> My_Investments { get; set; }
         public string Currency { get; set; }
-        public Nullable<double> Borrower_APR { get; set; }
+        public Nullable<decimal> Borrower_APR { get; set; }
         public Nullable<int> Detail_ID { get; set; }
     
         public virtual LoanDetail LoanDetail { get; set; }

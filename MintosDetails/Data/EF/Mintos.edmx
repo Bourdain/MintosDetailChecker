@@ -33,6 +33,10 @@
           <Property Name="Pledge Type" Type="nvarchar" MaxLength="256" />
           <Property Name="Occupation" Type="nvarchar" MaxLength="256" />
           <Property Name="Dependents" Type="nvarchar" MaxLength="256" />
+          <Property Name="Model" Type="nvarchar" MaxLength="256" />
+          <Property Name="Vehicle type" Type="nvarchar" MaxLength="256" />
+          <Property Name="Engine" Type="nvarchar" MaxLength="256" />
+          <Property Name="Manufacturing Year" Type="nvarchar" MaxLength="256" />
         </EntityType>
         <EntityType Name="PrimaryLoans">
           <Key>
@@ -40,23 +44,23 @@
           </Key>
           <Property Name="Country" Type="nvarchar" MaxLength="255" />
           <Property Name="ID" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Issue Date" Type="nvarchar" MaxLength="255" />
-          <Property Name="Closing Date" Type="nvarchar" MaxLength="255" />
+          <Property Name="Issue Date" Type="date" />
+          <Property Name="Closing Date" Type="date" />
           <Property Name="Loan Type" Type="nvarchar" MaxLength="255" />
           <Property Name="Amortization Method" Type="nvarchar" MaxLength="255" />
           <Property Name="Loan Originator" Type="nvarchar" MaxLength="255" />
-          <Property Name="Loan Amount" Type="float" />
-          <Property Name="Remaining Principal" Type="float" />
-          <Property Name="LTV" Type="float" />
-          <Property Name="Interest Rate" Type="float" />
-          <Property Name="Term" Type="float" />
-          <Property Name="Payments Received" Type="float" />
+          <Property Name="Loan Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Remaining Principal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="LTV" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Interest Rate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Term" Type="nvarchar" MaxLength="256" />
+          <Property Name="Payments Received" Type="int" />
           <Property Name="Status" Type="nvarchar" MaxLength="255" />
-          <Property Name="Amount Available for Investment" Type="float" />
+          <Property Name="Amount Available for Investment" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Buyback Guarantee" Type="nvarchar" MaxLength="255" />
-          <Property Name="My Investments" Type="float" />
+          <Property Name="My Investments" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Currency" Type="nvarchar" MaxLength="255" />
-          <Property Name="Borrower APR" Type="float" />
+          <Property Name="Borrower APR" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Detail ID" Type="int" />
         </EntityType>
         <Association Name="FK__PrimaryLo__Detai__3C69FB99">
@@ -84,39 +88,13 @@
     <edmx:ConceptualModels>
       <Schema Namespace="MintosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="MintosEntities" annotation:LazyLoadingEnabled="true" >
-          <EntitySet Name="PrimaryLoans" EntityType="MintosModel.PrimaryLoan" />
           <EntitySet Name="LoanDetails" EntityType="MintosModel.LoanDetail" />
+          <EntitySet Name="PrimaryLoans" EntityType="MintosModel.PrimaryLoan" />
           <AssociationSet Name="FK__PrimaryLo__Detai__3C69FB99" Association="MintosModel.FK__PrimaryLo__Detai__3C69FB99">
             <End Role="LoanDetail" EntitySet="LoanDetails" />
             <End Role="PrimaryLoan" EntitySet="PrimaryLoans" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="PrimaryLoan">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Issue_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Closing_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Loan_Amount" Type="Double" />
-          <Property Name="Remaining_Principal" Type="Double" />
-          <Property Name="LTV" Type="Double" />
-          <Property Name="Interest_Rate" Type="Double" />
-          <Property Name="Term" Type="Double" />
-          <Property Name="Payments_Received" Type="Double" />
-          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Amount_Available_for_Investment" Type="Double" />
-          <Property Name="Buyback_Guarantee" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="My_Investments" Type="Double" />
-          <Property Name="Currency" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Borrower_APR" Type="Double" />
-          <Property Name="Detail_ID" Type="Int32" />
-          <NavigationProperty Name="LoanDetail" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="PrimaryLoan" ToRole="LoanDetail" />
-        </EntityType>
         <EntityType Name="LoanDetail">
           <Key>
             <PropertyRef Name="DetailsID" />
@@ -145,7 +123,37 @@
           <Property Name="Pledge_Type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Occupation" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Dependents" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Vehicle_type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
+        </EntityType>
+        <EntityType Name="PrimaryLoan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Issue_Date" Type="DateTime" Precision="0" />
+          <Property Name="Closing_Date" Type="DateTime" Precision="0" />
+          <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Loan_Amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Remaining_Principal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="LTV" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Interest_Rate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Term" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Payments_Received" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_Available_for_Investment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Buyback_Guarantee" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="My_Investments" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Currency" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Borrower_APR" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Detail_ID" Type="Int32" />
+          <NavigationProperty Name="LoanDetail" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="PrimaryLoan" ToRole="LoanDetail" />
         </EntityType>
         <Association Name="FK__PrimaryLo__Detai__3C69FB99">
           <End Type="MintosModel.LoanDetail" Role="LoanDetail" Multiplicity="0..1" />
@@ -165,35 +173,13 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="MintosModelStoreContainer" CdmEntityContainer="MintosEntities" >
-          <EntitySetMapping Name="PrimaryLoans">
-            <EntityTypeMapping TypeName="MintosModel.PrimaryLoan">
-              <MappingFragment StoreEntitySet="PrimaryLoans">
-                <ScalarProperty Name="Detail_ID" ColumnName="Detail ID" />
-                <ScalarProperty Name="Borrower_APR" ColumnName="Borrower APR" />
-                <ScalarProperty Name="Currency" ColumnName="Currency" />
-                <ScalarProperty Name="My_Investments" ColumnName="My Investments" />
-                <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback Guarantee" />
-                <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount Available for Investment" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Payments_Received" ColumnName="Payments Received" />
-                <ScalarProperty Name="Term" ColumnName="Term" />
-                <ScalarProperty Name="Interest_Rate" ColumnName="Interest Rate" />
-                <ScalarProperty Name="LTV" ColumnName="LTV" />
-                <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining Principal" />
-                <ScalarProperty Name="Loan_Amount" ColumnName="Loan Amount" />
-                <ScalarProperty Name="Loan_Originator" ColumnName="Loan Originator" />
-                <ScalarProperty Name="Amortization_Method" ColumnName="Amortization Method" />
-                <ScalarProperty Name="Loan_Type" ColumnName="Loan Type" />
-                <ScalarProperty Name="Closing_Date" ColumnName="Closing Date" />
-                <ScalarProperty Name="Issue_Date" ColumnName="Issue Date" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Country" ColumnName="Country" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="LoanDetails">
             <EntityTypeMapping TypeName="MintosModel.LoanDetail">
               <MappingFragment StoreEntitySet="LoanDetails">
+                <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing Year" />
+                <ScalarProperty Name="Engine" ColumnName="Engine" />
+                <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle type" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
                 <ScalarProperty Name="Dependents" ColumnName="Dependents" />
                 <ScalarProperty Name="Occupation" ColumnName="Occupation" />
                 <ScalarProperty Name="Pledge_Type" ColumnName="Pledge Type" />
@@ -218,6 +204,32 @@
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="DetailsID" ColumnName="DetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrimaryLoans">
+            <EntityTypeMapping TypeName="MintosModel.PrimaryLoan">
+              <MappingFragment StoreEntitySet="PrimaryLoans">
+                <ScalarProperty Name="Detail_ID" ColumnName="Detail ID" />
+                <ScalarProperty Name="Borrower_APR" ColumnName="Borrower APR" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="My_Investments" ColumnName="My Investments" />
+                <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback Guarantee" />
+                <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount Available for Investment" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Payments_Received" ColumnName="Payments Received" />
+                <ScalarProperty Name="Term" ColumnName="Term" />
+                <ScalarProperty Name="Interest_Rate" ColumnName="Interest Rate" />
+                <ScalarProperty Name="LTV" ColumnName="LTV" />
+                <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining Principal" />
+                <ScalarProperty Name="Loan_Amount" ColumnName="Loan Amount" />
+                <ScalarProperty Name="Loan_Originator" ColumnName="Loan Originator" />
+                <ScalarProperty Name="Amortization_Method" ColumnName="Amortization Method" />
+                <ScalarProperty Name="Loan_Type" ColumnName="Loan Type" />
+                <ScalarProperty Name="Closing_Date" ColumnName="Closing Date" />
+                <ScalarProperty Name="Issue_Date" ColumnName="Issue Date" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

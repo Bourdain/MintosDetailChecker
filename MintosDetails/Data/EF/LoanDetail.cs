@@ -44,6 +44,10 @@ namespace Data.EF
         public string Pledge_Type { get; set; }
         public string Occupation { get; set; }
         public string Dependents { get; set; }
+        public string Model { get; set; }
+        public string Vehicle_type { get; set; }
+        public string Engine { get; set; }
+        public string Manufacturing_Year { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PrimaryLoan> PrimaryLoans { get; set; }

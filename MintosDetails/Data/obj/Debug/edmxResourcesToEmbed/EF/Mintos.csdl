@@ -1,39 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MintosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="MintosEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="PrimaryLoans" EntityType="MintosModel.PrimaryLoan" />
     <EntitySet Name="LoanDetails" EntityType="MintosModel.LoanDetail" />
+    <EntitySet Name="PrimaryLoans" EntityType="MintosModel.PrimaryLoan" />
     <AssociationSet Name="FK__PrimaryLo__Detai__3C69FB99" Association="MintosModel.FK__PrimaryLo__Detai__3C69FB99">
       <End Role="LoanDetail" EntitySet="LoanDetails" />
       <End Role="PrimaryLoan" EntitySet="PrimaryLoans" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="PrimaryLoan">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Issue_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Closing_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Loan_Amount" Type="Double" />
-    <Property Name="Remaining_Principal" Type="Double" />
-    <Property Name="LTV" Type="Double" />
-    <Property Name="Interest_Rate" Type="Double" />
-    <Property Name="Term" Type="Double" />
-    <Property Name="Payments_Received" Type="Double" />
-    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Amount_Available_for_Investment" Type="Double" />
-    <Property Name="Buyback_Guarantee" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="My_Investments" Type="Double" />
-    <Property Name="Currency" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Borrower_APR" Type="Double" />
-    <Property Name="Detail_ID" Type="Int32" />
-    <NavigationProperty Name="LoanDetail" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="PrimaryLoan" ToRole="LoanDetail" />
-  </EntityType>
   <EntityType Name="LoanDetail">
     <Key>
       <PropertyRef Name="DetailsID" />
@@ -62,7 +36,37 @@
     <Property Name="Pledge_Type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Occupation" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Dependents" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Vehicle_type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
+  </EntityType>
+  <EntityType Name="PrimaryLoan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Issue_Date" Type="DateTime" Precision="0" />
+    <Property Name="Closing_Date" Type="DateTime" Precision="0" />
+    <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Loan_Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Remaining_Principal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="LTV" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Interest_Rate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Term" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Payments_Received" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Amount_Available_for_Investment" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Buyback_Guarantee" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="My_Investments" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Currency" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Borrower_APR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Detail_ID" Type="Int32" />
+    <NavigationProperty Name="LoanDetail" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="PrimaryLoan" ToRole="LoanDetail" />
   </EntityType>
   <Association Name="FK__PrimaryLo__Detai__3C69FB99">
     <End Type="MintosModel.LoanDetail" Role="LoanDetail" Multiplicity="0..1" />

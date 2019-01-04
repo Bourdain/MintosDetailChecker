@@ -25,7 +25,7 @@ namespace Data.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<PrimaryLoan> PrimaryLoans { get; set; }
         public virtual DbSet<LoanDetail> LoanDetails { get; set; }
+        public virtual DbSet<PrimaryLoan> PrimaryLoans { get; set; }
     }
 }

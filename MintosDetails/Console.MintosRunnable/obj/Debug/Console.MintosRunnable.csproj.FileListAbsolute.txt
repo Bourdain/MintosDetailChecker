@@ -19,3 +19,7 @@ C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.M
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.dll
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.xml
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\CsvHelper.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\System.ValueTuple.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\CsvHelper.xml
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\System.ValueTuple.xml

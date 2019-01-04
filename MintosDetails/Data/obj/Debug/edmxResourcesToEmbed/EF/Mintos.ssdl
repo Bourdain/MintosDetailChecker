@@ -28,6 +28,10 @@
     <Property Name="Pledge Type" Type="nvarchar" MaxLength="256" />
     <Property Name="Occupation" Type="nvarchar" MaxLength="256" />
     <Property Name="Dependents" Type="nvarchar" MaxLength="256" />
+    <Property Name="Model" Type="nvarchar" MaxLength="256" />
+    <Property Name="Vehicle type" Type="nvarchar" MaxLength="256" />
+    <Property Name="Engine" Type="nvarchar" MaxLength="256" />
+    <Property Name="Manufacturing Year" Type="nvarchar" MaxLength="256" />
   </EntityType>
   <EntityType Name="PrimaryLoans">
     <Key>
@@ -35,23 +39,23 @@
     </Key>
     <Property Name="Country" Type="nvarchar" MaxLength="255" />
     <Property Name="ID" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="Issue Date" Type="nvarchar" MaxLength="255" />
-    <Property Name="Closing Date" Type="nvarchar" MaxLength="255" />
+    <Property Name="Issue Date" Type="date" />
+    <Property Name="Closing Date" Type="date" />
     <Property Name="Loan Type" Type="nvarchar" MaxLength="255" />
     <Property Name="Amortization Method" Type="nvarchar" MaxLength="255" />
     <Property Name="Loan Originator" Type="nvarchar" MaxLength="255" />
-    <Property Name="Loan Amount" Type="float" />
-    <Property Name="Remaining Principal" Type="float" />
-    <Property Name="LTV" Type="float" />
-    <Property Name="Interest Rate" Type="float" />
-    <Property Name="Term" Type="float" />
-    <Property Name="Payments Received" Type="float" />
+    <Property Name="Loan Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Remaining Principal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LTV" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Interest Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Term" Type="nvarchar" MaxLength="256" />
+    <Property Name="Payments Received" Type="int" />
     <Property Name="Status" Type="nvarchar" MaxLength="255" />
-    <Property Name="Amount Available for Investment" Type="float" />
+    <Property Name="Amount Available for Investment" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Buyback Guarantee" Type="nvarchar" MaxLength="255" />
-    <Property Name="My Investments" Type="float" />
+    <Property Name="My Investments" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Currency" Type="nvarchar" MaxLength="255" />
-    <Property Name="Borrower APR" Type="float" />
+    <Property Name="Borrower APR" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Detail ID" Type="int" />
   </EntityType>
   <Association Name="FK__PrimaryLo__Detai__3C69FB99">

@@ -120,7 +120,27 @@ namespace Business
                         loanDetail.Dependents = tableRowValues[i].InnerText.Trim();
                         break;
 
+                    case "Model":
+                        loanDetail.Model = tableRowValues[i].InnerText.Trim();
+                        break;
+
+                    case "Vehicle type":
+                        loanDetail.Vehicle_type = tableRowValues[i].InnerText.Trim();
+                        break;
+
+                    case "Engine":
+                        loanDetail.Engine = tableRowValues[i].InnerText.Trim();
+                        break;
+
+                    case "Manufacturing Year":
+                        loanDetail.Manufacturing_Year = tableRowValues[i].InnerText.Trim();
+                        break;
+
+                    case "Appraiser":
+                        break;
+
                     default:
+                        Console.WriteLine(tableRowDescriptions[i].InnerText + "\n" + tableRowValues[i].InnerText + "\n\n");
                         break;
                 }
             }
