@@ -1,0 +1,12 @@
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.dll.config
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.pdb
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.xml
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.dll
+C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.pdb
