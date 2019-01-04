@@ -48,6 +48,7 @@ namespace Data.EF
         public string Vehicle_type { get; set; }
         public string Engine { get; set; }
         public string Manufacturing_Year { get; set; }
+        public Nullable<int> Previous_Loans_with_the_Same_Loan_Originator { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PrimaryLoan> PrimaryLoans { get; set; }

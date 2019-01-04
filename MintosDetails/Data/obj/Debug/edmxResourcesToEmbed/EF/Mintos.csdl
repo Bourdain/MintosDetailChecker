@@ -41,6 +41,7 @@
     <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
+    <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="Int32" />
   </EntityType>
   <EntityType Name="PrimaryLoan">
     <Key>

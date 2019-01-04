@@ -15,9 +15,9 @@ namespace MintosRunnable
     {
         static void Main(string[] args)
         {
-            ProcessCSVFile();
-
-            Console.WriteLine("1 - Read CSV file and insert Listings in Database.\n2 - Process Loans with no details");
+            Console.WriteLine("1 - Read CSV file and insert Listings in Database.\n" +
+                "2 - Process Loans with no details\n" +
+                "3 - Process CSV then get Details");
             string userInput = Console.ReadLine();
 
             if (userInput == "1")
@@ -27,8 +27,30 @@ namespace MintosRunnable
 
             }
 
-            if (userInput == "2")
+            else if (userInput == "2")
             {
+                int i = 0;
+                while (i < int.Parse(ConfigurationManager.AppSettings["NumberOfThreads"]))
+                {
+                    Thread t1 = new Thread(ProcessLoanDetails);
+                    t1.Start();
+                    i++;
+
+                }
+                while (true)
+                {
+                    Business.PrimaryListings primaryListings = new Business.PrimaryListings();
+
+                    var primaryLoan = primaryListings.GetRandomNonDetailedLoan();
+                    if (primaryLoan == null)
+                        break;
+                    Thread.Sleep(5000);
+                }
+            }
+
+            else if (userInput == "3")
+            {
+                ProcessCSVFile();
                 int i = 0;
                 while (i < int.Parse(ConfigurationManager.AppSettings["NumberOfThreads"]))
                 {
@@ -87,6 +109,8 @@ namespace MintosRunnable
         private static void ProcessCSVFile()
         {
             string csvPath = ConfigurationManager.AppSettings["CSVPath"];
+            string csvFinishedPath = ConfigurationManager.AppSettings["csvFinishedPath"];
+
             var files = Directory.GetFiles(csvPath, "*.csv");
             foreach (var item in files)
             {
@@ -106,7 +130,7 @@ namespace MintosRunnable
 
                         primaryLoanToAdd.Country = csv.GetField(0);
                         primaryLoanToAdd.ID = csv.GetField(1);
-                        primaryLoanToAdd.Issue_Date = DateTime.ParseExact(csv.GetField(2),"dd.MM.yyyy",CultureInfo.InvariantCulture);
+                        primaryLoanToAdd.Issue_Date = DateTime.ParseExact(csv.GetField(2), "dd.MM.yyyy", CultureInfo.InvariantCulture);
                         primaryLoanToAdd.Closing_Date = DateTime.ParseExact(csv.GetField(3), "dd.MM.yyyy", CultureInfo.InvariantCulture);
                         primaryLoanToAdd.Loan_Type = csv.GetField(4);
                         primaryLoanToAdd.Amortization_Method = csv.GetField(5);
@@ -122,11 +146,16 @@ namespace MintosRunnable
                         primaryLoanToAdd.Buyback_Guarantee = csv.GetField(15);
                         primaryLoanToAdd.My_Investments = decimal.Parse(csv.GetField(16));
                         primaryLoanToAdd.Currency = csv.GetField(17);
-                        primaryLoanToAdd.Borrower_APR = decimal.Parse(csv.GetField(18));
+                        decimal aprDecimal = 0;
+                        primaryLoanToAdd.Borrower_APR = decimal.TryParse(csv.GetField(18),out aprDecimal)?(decimal?)aprDecimal:null;
 
                         listOfLoans.Add(primaryLoanToAdd);
                     }
                 }
+                Business.PrimaryListings primaryListings = new Business.PrimaryListings();
+                primaryListings.UpdateOrAddPrimaryLoans(listOfLoans);
+
+                File.Move(item, csvFinishedPath + DateTime.UtcNow.ToString("yyyy-MM-dd-hh_mm_ss")+ ".csv");
             }
         }
     }

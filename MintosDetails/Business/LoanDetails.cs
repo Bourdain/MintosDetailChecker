@@ -136,6 +136,10 @@ namespace Business
                         loanDetail.Manufacturing_Year = tableRowValues[i].InnerText.Trim();
                         break;
 
+                    case "Previous Loans with the Same Loan Originator":
+                        loanDetail.Previous_Loans_with_the_Same_Loan_Originator = int.Parse(tableRowValues[i].InnerText.Trim());
+                        break;
+
                     case "Appraiser":
                         break;
 

@@ -37,6 +37,7 @@
           <Property Name="Vehicle type" Type="nvarchar" MaxLength="256" />
           <Property Name="Engine" Type="nvarchar" MaxLength="256" />
           <Property Name="Manufacturing Year" Type="nvarchar" MaxLength="256" />
+          <Property Name="Previous Loans with the Same Loan Originator" Type="int" />
         </EntityType>
         <EntityType Name="PrimaryLoans">
           <Key>
@@ -128,6 +129,7 @@
           <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
+          <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="Int32" />
         </EntityType>
         <EntityType Name="PrimaryLoan">
           <Key>
@@ -176,6 +178,7 @@
           <EntitySetMapping Name="LoanDetails">
             <EntityTypeMapping TypeName="MintosModel.LoanDetail">
               <MappingFragment StoreEntitySet="LoanDetails">
+                <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous Loans with the Same Loan Originator" />
                 <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing Year" />
                 <ScalarProperty Name="Engine" ColumnName="Engine" />
                 <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle type" />

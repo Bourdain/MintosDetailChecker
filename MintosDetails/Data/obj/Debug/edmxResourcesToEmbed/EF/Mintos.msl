@@ -4,6 +4,7 @@
     <EntitySetMapping Name="LoanDetails">
       <EntityTypeMapping TypeName="MintosModel.LoanDetail">
         <MappingFragment StoreEntitySet="LoanDetails">
+          <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous Loans with the Same Loan Originator" />
           <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing Year" />
           <ScalarProperty Name="Engine" ColumnName="Engine" />
           <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle type" />
