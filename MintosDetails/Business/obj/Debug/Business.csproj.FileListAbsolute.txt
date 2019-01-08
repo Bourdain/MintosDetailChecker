@@ -16,3 +16,21 @@ C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Business\
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.dll
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\obj\Debug\Business.csprojAssemblyReference.cache
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Business.dll.config
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Business.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Business.pdb
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Data.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\EntityFramework.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Data.pdb
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\Data.dll.config
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\EntityFramework.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.pdb
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\bin\Debug\HtmlAgilityPack.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\obj\Debug\Business.csproj.CopyComplete
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\obj\Debug\Business.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Business\obj\Debug\Business.pdb

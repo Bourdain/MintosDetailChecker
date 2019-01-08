@@ -13,31 +13,31 @@
           <Property Name="Gender" Type="nvarchar" MaxLength="50" />
           <Property Name="Age" Type="int" />
           <Property Name="PreviousLoans" Type="int" />
-          <Property Name="Loan Purpose" Type="nvarchar" MaxLength="512" />
+          <Property Name="Loan_Purpose" Type="nvarchar" MaxLength="512" />
           <Property Name="Borrower" Type="nvarchar" MaxLength="512" />
-          <Property Name="Business Sector" Type="nvarchar(max)" />
+          <Property Name="Business_Sector" Type="nvarchar(max)" />
           <Property Name="Description" Type="nvarchar" MaxLength="512" />
           <Property Name="Country" Type="nvarchar" MaxLength="256" />
-          <Property Name="Risk category" Type="nvarchar" MaxLength="256" />
-          <Property Name="Estimated annual default rate" Type="float" />
+          <Property Name="Risk_category" Type="nvarchar" MaxLength="256" />
+          <Property Name="Estimated_annual_default_rate" Type="float" />
           <Property Name="Collateral" Type="nvarchar" MaxLength="512" />
           <Property Name="Valuation" Type="nvarchar" MaxLength="256" />
-          <Property Name="Personal guarantee" Type="nvarchar" MaxLength="128" />
-          <Property Name="Registered" Type="date" />
-          <Property Name="Invoice Transaction" Type="nvarchar" MaxLength="512" />
-          <Property Name="Invoice Recourse" Type="nvarchar" MaxLength="256" />
-          <Property Name="Real Estate Type" Type="nvarchar" MaxLength="256" />
+          <Property Name="Personal_guarantee" Type="nvarchar" MaxLength="128" />
+          <Property Name="Registered" Type="datetime" />
+          <Property Name="Invoice_Transaction" Type="nvarchar" MaxLength="512" />
+          <Property Name="Invoice_Recourse" Type="nvarchar" MaxLength="256" />
+          <Property Name="Real_Estate_Type" Type="nvarchar" MaxLength="256" />
           <Property Name="Size" Type="nvarchar" MaxLength="128" />
-          <Property Name="VAT Country" Type="nvarchar" MaxLength="256" />
+          <Property Name="VAT_Country" Type="nvarchar" MaxLength="256" />
           <Property Name="Liability" Type="nvarchar" MaxLength="128" />
-          <Property Name="Pledge Type" Type="nvarchar" MaxLength="256" />
+          <Property Name="Pledge_Type" Type="nvarchar" MaxLength="256" />
           <Property Name="Occupation" Type="nvarchar" MaxLength="256" />
           <Property Name="Dependents" Type="nvarchar" MaxLength="256" />
           <Property Name="Model" Type="nvarchar" MaxLength="256" />
-          <Property Name="Vehicle type" Type="nvarchar" MaxLength="256" />
+          <Property Name="Vehicle_type" Type="nvarchar" MaxLength="256" />
           <Property Name="Engine" Type="nvarchar" MaxLength="256" />
-          <Property Name="Manufacturing Year" Type="nvarchar" MaxLength="256" />
-          <Property Name="Previous Loans with the Same Loan Originator" Type="int" />
+          <Property Name="Manufacturing_Year" Type="nvarchar" MaxLength="256" />
+          <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="int" />
         </EntityType>
         <EntityType Name="PrimaryLoans">
           <Key>
@@ -45,24 +45,24 @@
           </Key>
           <Property Name="Country" Type="nvarchar" MaxLength="255" />
           <Property Name="ID" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Issue Date" Type="date" />
-          <Property Name="Closing Date" Type="date" />
-          <Property Name="Loan Type" Type="nvarchar" MaxLength="255" />
-          <Property Name="Amortization Method" Type="nvarchar" MaxLength="255" />
-          <Property Name="Loan Originator" Type="nvarchar" MaxLength="255" />
-          <Property Name="Loan Amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Remaining Principal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Issue_Date" Type="datetime" />
+          <Property Name="Closing_Date" Type="datetime" />
+          <Property Name="Loan_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amortization_Method" Type="nvarchar" MaxLength="255" />
+          <Property Name="Loan_Originator" Type="nvarchar" MaxLength="255" />
+          <Property Name="Loan_Amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Remaining_Principal" Type="decimal" Precision="18" Scale="2" />
           <Property Name="LTV" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Interest Rate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Interest_Rate" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Term" Type="nvarchar" MaxLength="256" />
-          <Property Name="Payments Received" Type="int" />
+          <Property Name="Payments_Received" Type="int" />
           <Property Name="Status" Type="nvarchar" MaxLength="255" />
-          <Property Name="Amount Available for Investment" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Buyback Guarantee" Type="nvarchar" MaxLength="255" />
-          <Property Name="My Investments" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Amount_Available_for_Investment" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Buyback_Guarantee" Type="nvarchar" MaxLength="255" />
+          <Property Name="My_Investments" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Currency" Type="nvarchar" MaxLength="255" />
-          <Property Name="Borrower APR" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Detail ID" Type="int" />
+          <Property Name="Borrower_APR" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Detail_ID" Type="int" />
         </EntityType>
         <Association Name="FK__PrimaryLo__Detai__3C69FB99">
           <End Role="LoanDetails" Type="Self.LoanDetails" Multiplicity="0..1" />
@@ -72,7 +72,7 @@
               <PropertyRef Name="DetailsID" />
             </Principal>
             <Dependent Role="PrimaryLoans">
-              <PropertyRef Name="Detail ID" />
+              <PropertyRef Name="Detail_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -114,7 +114,7 @@
           <Property Name="Collateral" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
           <Property Name="Valuation" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Personal_guarantee" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Registered" Type="DateTime" Precision="0" />
+          <Property Name="Registered" Type="DateTime" Precision="3" />
           <Property Name="Invoice_Transaction" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
           <Property Name="Invoice_Recourse" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Real_Estate_Type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
@@ -128,8 +128,8 @@
           <Property Name="Vehicle_type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
           <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="Int32" />
+          <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
         </EntityType>
         <EntityType Name="PrimaryLoan">
           <Key>
@@ -137,8 +137,8 @@
           </Key>
           <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Issue_Date" Type="DateTime" Precision="0" />
-          <Property Name="Closing_Date" Type="DateTime" Precision="0" />
+          <Property Name="Issue_Date" Type="DateTime" Precision="3" />
+          <Property Name="Closing_Date" Type="DateTime" Precision="3" />
           <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
@@ -169,7 +169,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -178,31 +178,31 @@
           <EntitySetMapping Name="LoanDetails">
             <EntityTypeMapping TypeName="MintosModel.LoanDetail">
               <MappingFragment StoreEntitySet="LoanDetails">
-                <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous Loans with the Same Loan Originator" />
-                <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing Year" />
+                <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous_Loans_with_the_Same_Loan_Originator" />
+                <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing_Year" />
                 <ScalarProperty Name="Engine" ColumnName="Engine" />
-                <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle type" />
+                <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle_type" />
                 <ScalarProperty Name="Model" ColumnName="Model" />
                 <ScalarProperty Name="Dependents" ColumnName="Dependents" />
                 <ScalarProperty Name="Occupation" ColumnName="Occupation" />
-                <ScalarProperty Name="Pledge_Type" ColumnName="Pledge Type" />
+                <ScalarProperty Name="Pledge_Type" ColumnName="Pledge_Type" />
                 <ScalarProperty Name="Liability" ColumnName="Liability" />
-                <ScalarProperty Name="VAT_Country" ColumnName="VAT Country" />
+                <ScalarProperty Name="VAT_Country" ColumnName="VAT_Country" />
                 <ScalarProperty Name="Size" ColumnName="Size" />
-                <ScalarProperty Name="Real_Estate_Type" ColumnName="Real Estate Type" />
-                <ScalarProperty Name="Invoice_Recourse" ColumnName="Invoice Recourse" />
-                <ScalarProperty Name="Invoice_Transaction" ColumnName="Invoice Transaction" />
+                <ScalarProperty Name="Real_Estate_Type" ColumnName="Real_Estate_Type" />
+                <ScalarProperty Name="Invoice_Recourse" ColumnName="Invoice_Recourse" />
+                <ScalarProperty Name="Invoice_Transaction" ColumnName="Invoice_Transaction" />
                 <ScalarProperty Name="Registered" ColumnName="Registered" />
-                <ScalarProperty Name="Personal_guarantee" ColumnName="Personal guarantee" />
+                <ScalarProperty Name="Personal_guarantee" ColumnName="Personal_guarantee" />
                 <ScalarProperty Name="Valuation" ColumnName="Valuation" />
                 <ScalarProperty Name="Collateral" ColumnName="Collateral" />
-                <ScalarProperty Name="Estimated_annual_default_rate" ColumnName="Estimated annual default rate" />
-                <ScalarProperty Name="Risk_category" ColumnName="Risk category" />
+                <ScalarProperty Name="Estimated_annual_default_rate" ColumnName="Estimated_annual_default_rate" />
+                <ScalarProperty Name="Risk_category" ColumnName="Risk_category" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Business_Sector" ColumnName="Business Sector" />
+                <ScalarProperty Name="Business_Sector" ColumnName="Business_Sector" />
                 <ScalarProperty Name="Borrower" ColumnName="Borrower" />
-                <ScalarProperty Name="Loan_Purpose" ColumnName="Loan Purpose" />
+                <ScalarProperty Name="Loan_Purpose" ColumnName="Loan_Purpose" />
                 <ScalarProperty Name="PreviousLoans" ColumnName="PreviousLoans" />
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
@@ -213,24 +213,24 @@
           <EntitySetMapping Name="PrimaryLoans">
             <EntityTypeMapping TypeName="MintosModel.PrimaryLoan">
               <MappingFragment StoreEntitySet="PrimaryLoans">
-                <ScalarProperty Name="Detail_ID" ColumnName="Detail ID" />
-                <ScalarProperty Name="Borrower_APR" ColumnName="Borrower APR" />
+                <ScalarProperty Name="Detail_ID" ColumnName="Detail_ID" />
+                <ScalarProperty Name="Borrower_APR" ColumnName="Borrower_APR" />
                 <ScalarProperty Name="Currency" ColumnName="Currency" />
-                <ScalarProperty Name="My_Investments" ColumnName="My Investments" />
-                <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback Guarantee" />
-                <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount Available for Investment" />
+                <ScalarProperty Name="My_Investments" ColumnName="My_Investments" />
+                <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback_Guarantee" />
+                <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount_Available_for_Investment" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Payments_Received" ColumnName="Payments Received" />
+                <ScalarProperty Name="Payments_Received" ColumnName="Payments_Received" />
                 <ScalarProperty Name="Term" ColumnName="Term" />
-                <ScalarProperty Name="Interest_Rate" ColumnName="Interest Rate" />
+                <ScalarProperty Name="Interest_Rate" ColumnName="Interest_Rate" />
                 <ScalarProperty Name="LTV" ColumnName="LTV" />
-                <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining Principal" />
-                <ScalarProperty Name="Loan_Amount" ColumnName="Loan Amount" />
-                <ScalarProperty Name="Loan_Originator" ColumnName="Loan Originator" />
-                <ScalarProperty Name="Amortization_Method" ColumnName="Amortization Method" />
-                <ScalarProperty Name="Loan_Type" ColumnName="Loan Type" />
-                <ScalarProperty Name="Closing_Date" ColumnName="Closing Date" />
-                <ScalarProperty Name="Issue_Date" ColumnName="Issue Date" />
+                <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining_Principal" />
+                <ScalarProperty Name="Loan_Amount" ColumnName="Loan_Amount" />
+                <ScalarProperty Name="Loan_Originator" ColumnName="Loan_Originator" />
+                <ScalarProperty Name="Amortization_Method" ColumnName="Amortization_Method" />
+                <ScalarProperty Name="Loan_Type" ColumnName="Loan_Type" />
+                <ScalarProperty Name="Closing_Date" ColumnName="Closing_Date" />
+                <ScalarProperty Name="Issue_Date" ColumnName="Issue_Date" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
               </MappingFragment>

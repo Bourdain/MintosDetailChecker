@@ -10,3 +10,15 @@ C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.dll
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.pdb
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csprojAssemblyReference.cache
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.dll.config
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\Data.pdb
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.csproj.CopyComplete
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.dll
+D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Data\obj\Debug\Data.pdb

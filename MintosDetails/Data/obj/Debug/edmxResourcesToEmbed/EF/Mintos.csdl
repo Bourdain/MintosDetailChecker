@@ -26,7 +26,7 @@
     <Property Name="Collateral" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
     <Property Name="Valuation" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Personal_guarantee" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="Registered" Type="DateTime" Precision="0" />
+    <Property Name="Registered" Type="DateTime" Precision="3" />
     <Property Name="Invoice_Transaction" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
     <Property Name="Invoice_Recourse" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Real_Estate_Type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
@@ -40,8 +40,8 @@
     <Property Name="Vehicle_type" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Engine" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
     <Property Name="Manufacturing_Year" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
     <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="Int32" />
+    <NavigationProperty Name="PrimaryLoans" Relationship="MintosModel.FK__PrimaryLo__Detai__3C69FB99" FromRole="LoanDetail" ToRole="PrimaryLoan" />
   </EntityType>
   <EntityType Name="PrimaryLoan">
     <Key>
@@ -49,8 +49,8 @@
     </Key>
     <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ID" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="Issue_Date" Type="DateTime" Precision="0" />
-    <Property Name="Closing_Date" Type="DateTime" Precision="0" />
+    <Property Name="Issue_Date" Type="DateTime" Precision="3" />
+    <Property Name="Closing_Date" Type="DateTime" Precision="3" />
     <Property Name="Loan_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Amortization_Method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Loan_Originator" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />

@@ -8,31 +8,31 @@
     <Property Name="Gender" Type="nvarchar" MaxLength="50" />
     <Property Name="Age" Type="int" />
     <Property Name="PreviousLoans" Type="int" />
-    <Property Name="Loan Purpose" Type="nvarchar" MaxLength="512" />
+    <Property Name="Loan_Purpose" Type="nvarchar" MaxLength="512" />
     <Property Name="Borrower" Type="nvarchar" MaxLength="512" />
-    <Property Name="Business Sector" Type="nvarchar(max)" />
+    <Property Name="Business_Sector" Type="nvarchar(max)" />
     <Property Name="Description" Type="nvarchar" MaxLength="512" />
     <Property Name="Country" Type="nvarchar" MaxLength="256" />
-    <Property Name="Risk category" Type="nvarchar" MaxLength="256" />
-    <Property Name="Estimated annual default rate" Type="float" />
+    <Property Name="Risk_category" Type="nvarchar" MaxLength="256" />
+    <Property Name="Estimated_annual_default_rate" Type="float" />
     <Property Name="Collateral" Type="nvarchar" MaxLength="512" />
     <Property Name="Valuation" Type="nvarchar" MaxLength="256" />
-    <Property Name="Personal guarantee" Type="nvarchar" MaxLength="128" />
-    <Property Name="Registered" Type="date" />
-    <Property Name="Invoice Transaction" Type="nvarchar" MaxLength="512" />
-    <Property Name="Invoice Recourse" Type="nvarchar" MaxLength="256" />
-    <Property Name="Real Estate Type" Type="nvarchar" MaxLength="256" />
+    <Property Name="Personal_guarantee" Type="nvarchar" MaxLength="128" />
+    <Property Name="Registered" Type="datetime" />
+    <Property Name="Invoice_Transaction" Type="nvarchar" MaxLength="512" />
+    <Property Name="Invoice_Recourse" Type="nvarchar" MaxLength="256" />
+    <Property Name="Real_Estate_Type" Type="nvarchar" MaxLength="256" />
     <Property Name="Size" Type="nvarchar" MaxLength="128" />
-    <Property Name="VAT Country" Type="nvarchar" MaxLength="256" />
+    <Property Name="VAT_Country" Type="nvarchar" MaxLength="256" />
     <Property Name="Liability" Type="nvarchar" MaxLength="128" />
-    <Property Name="Pledge Type" Type="nvarchar" MaxLength="256" />
+    <Property Name="Pledge_Type" Type="nvarchar" MaxLength="256" />
     <Property Name="Occupation" Type="nvarchar" MaxLength="256" />
     <Property Name="Dependents" Type="nvarchar" MaxLength="256" />
     <Property Name="Model" Type="nvarchar" MaxLength="256" />
-    <Property Name="Vehicle type" Type="nvarchar" MaxLength="256" />
+    <Property Name="Vehicle_type" Type="nvarchar" MaxLength="256" />
     <Property Name="Engine" Type="nvarchar" MaxLength="256" />
-    <Property Name="Manufacturing Year" Type="nvarchar" MaxLength="256" />
-    <Property Name="Previous Loans with the Same Loan Originator" Type="int" />
+    <Property Name="Manufacturing_Year" Type="nvarchar" MaxLength="256" />
+    <Property Name="Previous_Loans_with_the_Same_Loan_Originator" Type="int" />
   </EntityType>
   <EntityType Name="PrimaryLoans">
     <Key>
@@ -40,24 +40,24 @@
     </Key>
     <Property Name="Country" Type="nvarchar" MaxLength="255" />
     <Property Name="ID" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="Issue Date" Type="date" />
-    <Property Name="Closing Date" Type="date" />
-    <Property Name="Loan Type" Type="nvarchar" MaxLength="255" />
-    <Property Name="Amortization Method" Type="nvarchar" MaxLength="255" />
-    <Property Name="Loan Originator" Type="nvarchar" MaxLength="255" />
-    <Property Name="Loan Amount" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="Remaining Principal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Issue_Date" Type="datetime" />
+    <Property Name="Closing_Date" Type="datetime" />
+    <Property Name="Loan_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Amortization_Method" Type="nvarchar" MaxLength="255" />
+    <Property Name="Loan_Originator" Type="nvarchar" MaxLength="255" />
+    <Property Name="Loan_Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Remaining_Principal" Type="decimal" Precision="18" Scale="2" />
     <Property Name="LTV" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="Interest Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Interest_Rate" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Term" Type="nvarchar" MaxLength="256" />
-    <Property Name="Payments Received" Type="int" />
+    <Property Name="Payments_Received" Type="int" />
     <Property Name="Status" Type="nvarchar" MaxLength="255" />
-    <Property Name="Amount Available for Investment" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="Buyback Guarantee" Type="nvarchar" MaxLength="255" />
-    <Property Name="My Investments" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Amount_Available_for_Investment" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Buyback_Guarantee" Type="nvarchar" MaxLength="255" />
+    <Property Name="My_Investments" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Currency" Type="nvarchar" MaxLength="255" />
-    <Property Name="Borrower APR" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="Detail ID" Type="int" />
+    <Property Name="Borrower_APR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Detail_ID" Type="int" />
   </EntityType>
   <Association Name="FK__PrimaryLo__Detai__3C69FB99">
     <End Role="LoanDetails" Type="Self.LoanDetails" Multiplicity="0..1" />
@@ -67,7 +67,7 @@
         <PropertyRef Name="DetailsID" />
       </Principal>
       <Dependent Role="PrimaryLoans">
-        <PropertyRef Name="Detail ID" />
+        <PropertyRef Name="Detail_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
