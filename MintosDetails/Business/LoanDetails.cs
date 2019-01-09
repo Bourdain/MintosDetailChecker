@@ -144,7 +144,16 @@ namespace Business
                         break;
 
                     default:
-                        Console.WriteLine(tableRowDescriptions[i].InnerText + "\n" + tableRowValues[i].InnerText + "\n\n");
+                        string descriptorText = tableRowDescriptions[i].InnerText;
+                        Console.WriteLine(descriptorText + "\n" + tableRowValues[i].InnerText + "\n\n");
+                        MintosEntities mintosEntities = new MintosEntities();
+                        if (!mintosEntities.InformationToAdds.Any(x => x.Description == descriptorText))
+                        {
+                            Data.EF.InformationToAdd informationToAdd = new InformationToAdd();
+                            informationToAdd.Description = descriptorText;
+                            mintosEntities.InformationToAdds.Add(informationToAdd);
+                            mintosEntities.SaveChanges();
+                        }
                         break;
                 }
             }
@@ -152,7 +161,7 @@ namespace Business
             return loanDetail;
         }
 
-        public int AddDetails (Data.EF.LoanDetail loanDetail)
+        public int AddDetails(Data.EF.LoanDetail loanDetail)
         {
             using (MintosEntities mintosEntities = new MintosEntities())
             {

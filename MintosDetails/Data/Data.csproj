@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EF\InformationToAdd.cs">
+      <DependentUpon>Mintos.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\LoanDetail.cs">
       <DependentUpon>Mintos.tt</DependentUpon>
     </Compile>

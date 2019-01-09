@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="MintosModel.LoanDetail" Width="1.5" PointX="0.75" PointY="1.125" />
         <EntityTypeShape EntityType="MintosModel.PrimaryLoan" Width="1.5" PointX="3" PointY="1.875" />
         <AssociationConnector Association="MintosModel.FK__PrimaryLo__Detai__3C69FB99" />
+        <EntityTypeShape EntityType="MintosModel.InformationToAdd" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -27,5 +27,6 @@ namespace Data.EF
     
         public virtual DbSet<LoanDetail> LoanDetails { get; set; }
         public virtual DbSet<PrimaryLoan> PrimaryLoans { get; set; }
+        public virtual DbSet<InformationToAdd> InformationToAdds { get; set; }
     }
 }
