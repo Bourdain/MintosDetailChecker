@@ -8,6 +8,7 @@ using CsvHelper;
 using HtmlAgilityPack;
 using Data.EF;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace MintosRunnable
 {
@@ -88,8 +89,8 @@ namespace MintosRunnable
                     break;
                 }
 
-                Console.WriteLine("Thead " + Thread.CurrentThread.ManagedThreadId + " " + primaryLoan.ID);
-
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
                 HtmlWeb htmlWeb = new HtmlWeb();
                 var htmlDocumentsPage = htmlWeb.Load("https://www.mintos.com/en/" + primaryLoan.ID);
                 var getAllTables = htmlDocumentsPage.DocumentNode.Descendants("table");
@@ -103,6 +104,9 @@ namespace MintosRunnable
 
                 primaryListings.UpdateLoanDetailsID(loanID, primaryLoan);
 
+                stopwatch.Stop();
+                Console.WriteLine("Thead " + Thread.CurrentThread.ManagedThreadId + " " + primaryLoan.ID + "  Time: " + stopwatch.ElapsedMilliseconds);
+
             }
         }
 
@@ -110,6 +114,9 @@ namespace MintosRunnable
         {
             string csvPath = ConfigurationManager.AppSettings["CSVPath"];
             string csvFinishedPath = ConfigurationManager.AppSettings["csvFinishedPath"];
+            int csvAddLimit = int.Parse(ConfigurationManager.AppSettings["AddEveryXcsvRecords"]);
+            int csvCounter = 0;
+            Business.PrimaryListings primaryListings = new Business.PrimaryListings();
 
             var files = Directory.GetFiles(csvPath, "*.csv");
             foreach (var item in files)
@@ -150,9 +157,15 @@ namespace MintosRunnable
                         primaryLoanToAdd.Borrower_APR = decimal.TryParse(csv.GetField(18),out aprDecimal)?(decimal?)aprDecimal:null;
 
                         listOfLoans.Add(primaryLoanToAdd);
+                        csvCounter++;
+                        if (csvCounter >= csvAddLimit)
+                        {
+                            primaryListings.UpdateOrAddPrimaryLoans(listOfLoans);
+                            listOfLoans = new List<PrimaryLoan>();
+                            csvCounter = 0;
+                        }
                     }
                 }
-                Business.PrimaryListings primaryListings = new Business.PrimaryListings();
                 primaryListings.UpdateOrAddPrimaryLoans(listOfLoans);
 
                 File.Move(item, csvFinishedPath + DateTime.UtcNow.ToString("yyyy-MM-dd-hh_mm_ss")+ ".csv");

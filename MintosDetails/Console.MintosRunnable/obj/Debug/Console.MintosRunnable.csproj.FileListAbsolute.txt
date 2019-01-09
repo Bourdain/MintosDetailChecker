@@ -23,26 +23,3 @@ C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.M
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\System.ValueTuple.dll
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\CsvHelper.xml
 C:\Users\cesarcosta\Documents\GitHub\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\System.ValueTuple.xml
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\obj\Debug\Console.MintosRunnable.csprojAssemblyReference.cache
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\obj\Debug\Console.MintosRunnable.csproj.CoreCompileInputs.cache
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Console.MintosRunnable.exe.config
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Console.MintosRunnable.exe
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Console.MintosRunnable.pdb
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Business.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\CsvHelper.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Data.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\EntityFramework.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\EntityFramework.SqlServer.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.dll
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Business.pdb
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Business.dll.config
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Data.pdb
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\Data.dll.config
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\CsvHelper.xml
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\EntityFramework.xml
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\EntityFramework.SqlServer.xml
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.pdb
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\bin\Debug\HtmlAgilityPack.xml
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\obj\Debug\Console.MintosRunnable.csproj.CopyComplete
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\obj\Debug\Console.MintosRunnable.exe
-D:\Visual Studio\Repository\MintosDetailChecker\MintosDetails\Console.MintosRunnable\obj\Debug\Console.MintosRunnable.pdb

@@ -4,31 +4,31 @@
     <EntitySetMapping Name="LoanDetails">
       <EntityTypeMapping TypeName="MintosModel.LoanDetail">
         <MappingFragment StoreEntitySet="LoanDetails">
-          <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous_Loans_with_the_Same_Loan_Originator" />
-          <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing_Year" />
+          <ScalarProperty Name="Previous_Loans_with_the_Same_Loan_Originator" ColumnName="Previous Loans with the Same Loan Originator" />
+          <ScalarProperty Name="Manufacturing_Year" ColumnName="Manufacturing Year" />
           <ScalarProperty Name="Engine" ColumnName="Engine" />
-          <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle_type" />
+          <ScalarProperty Name="Vehicle_type" ColumnName="Vehicle type" />
           <ScalarProperty Name="Model" ColumnName="Model" />
           <ScalarProperty Name="Dependents" ColumnName="Dependents" />
           <ScalarProperty Name="Occupation" ColumnName="Occupation" />
-          <ScalarProperty Name="Pledge_Type" ColumnName="Pledge_Type" />
+          <ScalarProperty Name="Pledge_Type" ColumnName="Pledge Type" />
           <ScalarProperty Name="Liability" ColumnName="Liability" />
-          <ScalarProperty Name="VAT_Country" ColumnName="VAT_Country" />
+          <ScalarProperty Name="VAT_Country" ColumnName="VAT Country" />
           <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Real_Estate_Type" ColumnName="Real_Estate_Type" />
-          <ScalarProperty Name="Invoice_Recourse" ColumnName="Invoice_Recourse" />
-          <ScalarProperty Name="Invoice_Transaction" ColumnName="Invoice_Transaction" />
+          <ScalarProperty Name="Real_Estate_Type" ColumnName="Real Estate Type" />
+          <ScalarProperty Name="Invoice_Recourse" ColumnName="Invoice Recourse" />
+          <ScalarProperty Name="Invoice_Transaction" ColumnName="Invoice Transaction" />
           <ScalarProperty Name="Registered" ColumnName="Registered" />
-          <ScalarProperty Name="Personal_guarantee" ColumnName="Personal_guarantee" />
+          <ScalarProperty Name="Personal_guarantee" ColumnName="Personal guarantee" />
           <ScalarProperty Name="Valuation" ColumnName="Valuation" />
           <ScalarProperty Name="Collateral" ColumnName="Collateral" />
-          <ScalarProperty Name="Estimated_annual_default_rate" ColumnName="Estimated_annual_default_rate" />
-          <ScalarProperty Name="Risk_category" ColumnName="Risk_category" />
+          <ScalarProperty Name="Estimated_annual_default_rate" ColumnName="Estimated annual default rate" />
+          <ScalarProperty Name="Risk_category" ColumnName="Risk category" />
           <ScalarProperty Name="Country" ColumnName="Country" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Business_Sector" ColumnName="Business_Sector" />
+          <ScalarProperty Name="Business_Sector" ColumnName="Business Sector" />
           <ScalarProperty Name="Borrower" ColumnName="Borrower" />
-          <ScalarProperty Name="Loan_Purpose" ColumnName="Loan_Purpose" />
+          <ScalarProperty Name="Loan_Purpose" ColumnName="Loan Purpose" />
           <ScalarProperty Name="PreviousLoans" ColumnName="PreviousLoans" />
           <ScalarProperty Name="Age" ColumnName="Age" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
@@ -39,24 +39,24 @@
     <EntitySetMapping Name="PrimaryLoans">
       <EntityTypeMapping TypeName="MintosModel.PrimaryLoan">
         <MappingFragment StoreEntitySet="PrimaryLoans">
-          <ScalarProperty Name="Detail_ID" ColumnName="Detail_ID" />
-          <ScalarProperty Name="Borrower_APR" ColumnName="Borrower_APR" />
+          <ScalarProperty Name="Detail_ID" ColumnName="Detail ID" />
+          <ScalarProperty Name="Borrower_APR" ColumnName="Borrower APR" />
           <ScalarProperty Name="Currency" ColumnName="Currency" />
-          <ScalarProperty Name="My_Investments" ColumnName="My_Investments" />
-          <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback_Guarantee" />
-          <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount_Available_for_Investment" />
+          <ScalarProperty Name="My_Investments" ColumnName="My Investments" />
+          <ScalarProperty Name="Buyback_Guarantee" ColumnName="Buyback Guarantee" />
+          <ScalarProperty Name="Amount_Available_for_Investment" ColumnName="Amount Available for Investment" />
           <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Payments_Received" ColumnName="Payments_Received" />
+          <ScalarProperty Name="Payments_Received" ColumnName="Payments Received" />
           <ScalarProperty Name="Term" ColumnName="Term" />
-          <ScalarProperty Name="Interest_Rate" ColumnName="Interest_Rate" />
+          <ScalarProperty Name="Interest_Rate" ColumnName="Interest Rate" />
           <ScalarProperty Name="LTV" ColumnName="LTV" />
-          <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining_Principal" />
-          <ScalarProperty Name="Loan_Amount" ColumnName="Loan_Amount" />
-          <ScalarProperty Name="Loan_Originator" ColumnName="Loan_Originator" />
-          <ScalarProperty Name="Amortization_Method" ColumnName="Amortization_Method" />
-          <ScalarProperty Name="Loan_Type" ColumnName="Loan_Type" />
-          <ScalarProperty Name="Closing_Date" ColumnName="Closing_Date" />
-          <ScalarProperty Name="Issue_Date" ColumnName="Issue_Date" />
+          <ScalarProperty Name="Remaining_Principal" ColumnName="Remaining Principal" />
+          <ScalarProperty Name="Loan_Amount" ColumnName="Loan Amount" />
+          <ScalarProperty Name="Loan_Originator" ColumnName="Loan Originator" />
+          <ScalarProperty Name="Amortization_Method" ColumnName="Amortization Method" />
+          <ScalarProperty Name="Loan_Type" ColumnName="Loan Type" />
+          <ScalarProperty Name="Closing_Date" ColumnName="Closing Date" />
+          <ScalarProperty Name="Issue_Date" ColumnName="Issue Date" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Country" ColumnName="Country" />
         </MappingFragment>

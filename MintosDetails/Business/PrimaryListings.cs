@@ -67,7 +67,7 @@ namespace Business
                     else
                     {
                         //add
-                        Console.WriteLine("Queueing " + loanItem.ID);
+                        Console.WriteLine("Adding " + loanItem.ID);
 
                         mintosEntities.PrimaryLoans.Add(loanItem);
                     }
