@@ -7,6 +7,7 @@
       <End Role="LoanDetail" EntitySet="LoanDetails" />
       <End Role="PrimaryLoan" EntitySet="PrimaryLoans" />
     </AssociationSet>
+    <EntitySet Name="InformationToAdds" EntityType="MintosModel.InformationToAdd" />
   </EntityContainer>
   <EntityType Name="LoanDetail">
     <Key>
@@ -81,4 +82,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="InformationToAdd">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MintosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="InformationToAdd">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
   <EntityType Name="LoanDetails">
     <Key>
       <PropertyRef Name="DetailsID" />
@@ -72,6 +78,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="MintosModelStoreContainer">
+    <EntitySet Name="InformationToAdd" EntityType="Self.InformationToAdd" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoanDetails" EntityType="Self.LoanDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PrimaryLoans" EntityType="Self.PrimaryLoans" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__PrimaryLo__Detai__3C69FB99" Association="Self.FK__PrimaryLo__Detai__3C69FB99">
